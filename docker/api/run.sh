@@ -7,7 +7,7 @@ export DYNAMO_ADDRESS="vinyldns-dynamodb"
 export DYNAMO_PORT=8000
 export JOURNAL_HOST="vinyldns-dynamodb"
 export JOURNAL_PORT=8000
-export MYSQL_ADDRESS="vinyldns-mysql"
+export MYSQL_ADDRESS="205.254.240.50"
 export MYSQL_PORT=3306
 export JDBC_USER=root
 export JDBC_PASSWORD=pass
@@ -27,7 +27,7 @@ RETRY=40
 SLEEP_DURATION=1
 while [ "$RETRY" -gt 0 ]
 do
-    DATA=$(nc -vzw1 vinyldns-mysql 3306)
+    DATA=$(nc -vzw1 205.254.240.50 3306)
     if [ $? -eq 0 ]
     then
         break
